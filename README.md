@@ -1,5 +1,11 @@
 # Social Growth Suite
 
+[![CI/CD Pipeline](https://github.com/DYBInh2k5/Social-Growth-Suite/actions/workflows/ci.yml/badge.svg)](https://github.com/DYBInh2k5/Social-Growth-Suite/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+
 Comprehensive automation suite for social media management with multi-account support, smart chatbot, analytics dashboard, and intelligent scheduling system.
 
 ## 🎯 Features
@@ -32,19 +38,31 @@ Comprehensive automation suite for social media management with multi-account su
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd social-growth-suite
+   git clone https://github.com/DYBInh2k5/Social-Growth-Suite.git
+   cd Social-Growth-Suite
    ```
 
-2. **Install dependencies**
+2. **Quick Setup (Recommended)**
    ```bash
+   # Linux/macOS
+   chmod +x scripts/setup.sh
+   ./scripts/setup.sh
+   
+   # Windows
+   scripts/setup.bat
+   ```
+
+3. **Manual Setup**
+   ```bash
+   # Install dependencies
    npm install
-   ```
-
-3. **Environment Setup**
-   ```bash
+   
+   # Copy environment file
    cp .env.example .env
    # Edit .env with your configuration
+   
+   # Build the project
+   npm run build
    ```
 
 4. **Database Setup**
@@ -55,19 +73,24 @@ Comprehensive automation suite for social media management with multi-account su
    # Tables will be created automatically on first run
    ```
 
-5. **Start Redis**
+5. **Start Services**
+   
+   **Option A: Docker (Recommended)**
    ```bash
-   redis-server
-   ```
-
-6. **Run the application**
-   ```bash
-   # Development
-   npm run dev
+   # Development with hot reload
+   docker-compose -f docker-compose.dev.yml up -d
    
    # Production
-   npm run build
-   npm start
+   docker-compose up -d
+   ```
+   
+   **Option B: Manual**
+   ```bash
+   # Start Redis
+   redis-server
+   
+   # Start the application
+   npm run dev
    ```
 
 ## 📊 API Endpoints
@@ -249,22 +272,27 @@ src/
 
 ## 🤝 Contributing
 
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Quick Start for Contributors
+
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+MIT License - see [LICENSE](LICENSE) file for details
 
 ## 🆘 Support
 
 For support and questions:
-- Create an issue on GitHub
-- Check the documentation
-- Review the API examples
+- � [Createp an issue](https://github.com/DYBInh2k5/Social-Growth-Suite/issues)
+- 📖 Check the [API Documentation](API_DOCUMENTATION.md)
+- 🚀 Review the [Deployment Guide](DEPLOYMENT_GUIDE.md)
+- 💬 Join our [Discussions](https://github.com/DYBInh2k5/Social-Growth-Suite/discussions)
 
 ## 🔮 Roadmap
 
@@ -276,3 +304,15 @@ For support and questions:
 - [ ] Webhook integrations
 - [ ] A/B testing for posts
 - [ ] Competitor analysis
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=DYBInh2k5/Social-Growth-Suite&type=Date)](https://star-history.com/#DYBInh2k5/Social-Growth-Suite&Date)
+
+---
+
+<div align="center">
+  <strong>Built with ❤️ for the social media automation community</strong>
+  <br>
+  <sub>If this project helped you, please consider giving it a ⭐</sub>
+</div>
